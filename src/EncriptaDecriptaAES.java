@@ -7,7 +7,7 @@ public class EncriptaDecriptaAES {
 
  static String IV = "AAAAAAAAAAAAAAAA";
  static String textopuro;
- static String chaveencriptacao = "0126456789acdef";
+ static String chaveencriptacao = "0126456789achurf";
 
  @SuppressWarnings("deprecation")
 public static void main(String [] args) {
@@ -18,7 +18,7 @@ public static void main(String [] args) {
 	  textopuro = sc.nextLine();
       System.out.println("Texto Puro: " + textopuro);
 
-      byte[] textoencriptado = encrypt(textopuro, chaveencriptacao);
+      byte[] textoencriptado = encrypt(textopuro, chaveencriptacao); // chama o método para encriptar a mensagem
 
       System.out.print("Texto Encriptado: ");
 
@@ -27,7 +27,7 @@ public static void main(String [] args) {
 
       System.out.println("");
 
-      String textodecriptado = decrypt(textoencriptado, chaveencriptacao);
+      String textodecriptado = decrypt(textoencriptado, chaveencriptacao); // chama o método para decriptar a mensagem
 
       System.out.println("Texto Decriptado: " + textodecriptado);
       sc.close();
